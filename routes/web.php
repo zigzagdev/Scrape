@@ -13,10 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() {
-    $crawler = Goutte::request('GET', 'https://duckduckgo.com/html/?q=Laravel');
-    $crawler->filter('.result__title .result__a')->each(function ($node) {
-        dump($node->text());
-    });
-    return view('welcome');
-});
+
+Route::get('/index', 'App\Http\Controllers\ScrapingController@scrape')->name('scraping');

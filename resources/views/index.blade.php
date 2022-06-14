@@ -21,6 +21,12 @@
         </style>
     </head>
     <body class="antialiased">
-
+      @section('content')
+        <ol class="container">
+          @foreach($files as $each)
+            <li>{{ $each }}</li>
+          @endforeach
+        </ol>
+      @endsection
     </body>
 </html>
