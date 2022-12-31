@@ -21,3 +21,7 @@ ENV PATH $PATH:/composer/vendor/bin
 WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get install -y nodejs
+COPY ./php.ini /usr/local/etc/php/php.ini
