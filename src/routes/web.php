@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('search/top');
-});
-
-Route::get('/a', function () {
     return view('welcome');
 });
