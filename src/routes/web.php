@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('search/top');
 });
 
-Route::get('/a', function () {
-    return view('welcome');
+Route::get('/result', function () {
+    return view('search/index');
 });
