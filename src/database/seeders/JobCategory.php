@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class JobCategory extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -24,6 +24,5 @@ class DatabaseSeeder extends Seeder
             ['id' => 8, 'name' => 'サーバーエンジニア'],
             ['id' => 9, 'name' => 'SRE'],
         ]);
-        \App\Models\Job::factory(100)->create();
     }
 }
