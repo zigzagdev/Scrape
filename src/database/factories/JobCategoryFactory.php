@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class JobSeeder extends Seeder
+class JobCategoryFactory extends Seeder
 {
     /**
      * Run the database seeds.

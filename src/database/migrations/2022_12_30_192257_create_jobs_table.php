@@ -15,10 +15,10 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255)->unique();
+            $table->string('name', 255);
             $table->text('description');
             $table->unsignedBigInteger('category_id')->comment('category_id');
-            $table->foreign('category_id')->references('id')->on('jobs')->onUpdate('CASCADE')->onDelete('CASCADE');
+            $table->foreign('category_id')->references('id')->on('job_categories')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->timestamps();
         });
     }
