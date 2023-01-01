@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::get('/', function () {
 Route::get('/result', function () {
     return view('search/index');
 });
+Route::get('/result', [SearchController::class, 'SearchJob']);

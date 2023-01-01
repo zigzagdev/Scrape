@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Job;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +25,6 @@ class DatabaseSeeder extends Seeder
             ['id' => 8, 'name' => 'サーバーエンジニア'],
             ['id' => 9, 'name' => 'SRE'],
         ]);
-        \App\Models\Job::factory(100)->create();
+        Job::factory(100)->create();
     }
 }

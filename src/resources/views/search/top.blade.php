@@ -10,7 +10,7 @@
 <body>
 <h1 style="margin: 50px 40px">仕事一覧</h1>
 <div class="outlook">
-    <form method="get" action="/result">
+    <form method="get" action="/result" name="search">
         <label for="search">検索</label>
         <input name="search" value=""/>
         <button type="submit">検索</button>
