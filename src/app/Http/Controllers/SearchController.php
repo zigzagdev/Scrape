@@ -18,3 +18,4 @@ class SearchController extends Controller
         return view('search/index', compact('jobs'));
     }
 }
+
