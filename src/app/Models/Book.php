@@ -20,7 +20,7 @@ class Book extends Model
 
     public function book()
     {
-        return $this->belongsTo('Author');
+        return $this->belongsTo('App\Author');
     }
 
     public function toSearchableArray()
