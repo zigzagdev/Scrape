@@ -5,8 +5,17 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
-    schedule:
-      interval: "weekly"
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: phpunit/phpunit
+    versions:
+    - ">= 8.a, < 9"
+  - dependency-name: phpunit/phpunit
+    versions:
+    - ">= 9.a, < 10"
 
