@@ -12,26 +12,14 @@ class Book extends Model
     use HasFactory, Searchable, Notifiable;
 
     protected $touches = ['author'];
+    public function book()
+    {
+        return $this->belongsTo('App\Models\Author');
+    }
 
     public function searchableAs()
     {
         return 'book_index';
-    }
-
-    public function book()
-    {
-        return $this->belongsTo('App\Author');
-    }
-
-    public function toSearchableArray()
-    {
-        $array = $this->toArray();
-
-        $array = $this->transform($array);
-
-        $array['author_name'] = $this->author->name;
-
-        return $array;
     }
 
 }

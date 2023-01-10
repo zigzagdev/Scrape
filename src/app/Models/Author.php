@@ -11,29 +11,13 @@ class Author extends Model
 {
     use HasFactory, Searchable, Notifiable;
 
-    public function searchableAs()
-    {
-        return 'authors_index';
-    }
-
-    public function toSearchableArray()
-    {
-        $array = $this->toArray();
-
-        $books = $this->books;
-
-        for($i = 0; $i < $books->count(); $i++)
-        {
-
-            $array["book_names"][$i] = $books[$i]['name'];
-
-        }
-
-        return $array;
-    }
-
     public function Author()
     {
-        $this->hasMany('App\Book');
+        $this->hasMany('App\Models\Book');
+    }
+
+    public function searchableAs()
+    {
+        return 'author_index';
     }
 }
